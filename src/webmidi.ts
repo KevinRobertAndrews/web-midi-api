@@ -7,6 +7,34 @@ WebMidi.enable(function (err) {
   }
 });
 
+var C = new Howl({
+  src: ['sounds/piano-ff/39196__jobro__piano-ff-048.wav']
+});
+
+var D = new Howl({
+  src: ['sounds/piano-ff/39198__jobro__piano-ff-050.wav']
+});
+
+var E = new Howl({
+  src: ['sounds/piano-ff/39200__jobro__piano-ff-052.wav']
+});
+
+var F = new Howl({
+  src: ['sounds/piano-ff/39201__jobro__piano-ff-053.wav']
+});
+
+var G = new Howl({
+  src: ['sounds/piano-ff/39203__jobro__piano-ff-055.wav']
+});
+
+var A = new Howl({
+  src: ['sounds/piano-ff/39205__jobro__piano-ff-057.wav']
+});
+
+var B = new Howl({
+  src: ['sounds/piano-ff/39207__jobro__piano-ff-059.wav']
+});
+
 // Check inputs and outputs
 WebMidi.enable(function (err) {
     console.log(WebMidi.inputs);
@@ -35,7 +63,31 @@ WebMidi.enable(function (err) {
   input.addListener('noteon', "all", function (e) {
     console.log(e.note.name, e.rawVelocity);
     changeColor(e.note.name)
+    
 
+    switch (e.note.name) {
+      case 'C':
+        C.play();
+        break;
+      case 'D':
+        D.play();
+        break;
+      case 'E':
+        E.play();
+        break;
+      case 'F':
+        F.play();
+        break;
+      case 'G':
+        G.play();
+        break;
+      case 'A':
+        A.play();
+        break;
+      case 'B':
+        B.play();
+        break;
+    }
 
   });
   input.addListener('noteoff', "all", function (e) {
@@ -43,4 +95,3 @@ WebMidi.enable(function (err) {
     changeColor(e.note.name)
   })
 });
-
