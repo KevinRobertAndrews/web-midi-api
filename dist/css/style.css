@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(247, 247, 247);
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.keyboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.note {
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: rgb(164, 161, 173);
+  width: 80px;
+  height: 80px;
+  font-size: 1.2rem;
+  transition: all 0.1s ease-in-out;
+  color: #333;
+}
+
+.pop {
+  transform: scale(1.1);
+}
+
+.red {
+  background-color: #ce3e3e;
+}
+
+.orange {
+  background-color: #e58c1f;
+}
+
+.yellow {
+  background-color: #eed12b;
+}
+
+.green {
+  background-color: #89d289;
+}
+
+.blue {
+  background-color: #789cd3;
+}
+
+.indego {
+  background-color: #996ce6;
+}
+
+.violet {
+  background-color: #e662ba;
+}
